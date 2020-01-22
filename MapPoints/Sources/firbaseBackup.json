@@ -1,0 +1,51 @@
+{
+  "Locations" : [ {
+    "name" : "Klovska",
+    "point" : {
+      "latitude" : 50.4370183,
+      "longitude" : 30.5317783
+    }
+  }, {
+    "name" : "Arsenalna",
+    "point" : {
+      "latitude" : 50.4430177,
+      "longitude" : 30.5477321
+    }
+  }, {
+    "name" : "Khreshchatyk",
+    "point" : {
+      "latitude" : 50.4470556,
+      "longitude" : 30.5253625
+    }
+  }, {
+    "name" : "Poshtova Ploshcha",
+    "point" : {
+      "latitude" : 50.4592697,
+      "longitude" : 30.524413
+    }
+  }, {
+    "name" : "Zoloti Vorota",
+    "point" : {
+      "latitude" : 50.4461606,
+      "longitude" : 30.5154276
+    }
+  }, {
+    "name" : "Universytet",
+    "point" : {
+      "latitude" : 50.4444389,
+      "longitude" : 30.5059862
+    }
+  }, {
+    "name" : "Ploshcha Lva Tolstoho",
+    "point" : {
+      "latitude" : 50.4396628,
+      "longitude" : 30.5166829
+    }
+  }, {
+    "name" : "Maidan Nezalezhnosti",
+    "point" : {
+      "latitude" : 50.4479745,
+      "longitude" : 30.5252767
+    }
+  } ]
+}
