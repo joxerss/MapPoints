@@ -183,13 +183,15 @@ extension UIViewController {
     }
     
     func hideAnimatedLoader() {
-        animationLoaderView.stop()
-        animationLoaderView.isHidden = true
-        
-        if #available(iOS 13.0, *) {
-            UIApplication.shared.windows.first?.isUserInteractionEnabled = true
-        } else {
-            UIApplication.shared.endIgnoringInteractionEvents()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            self?.animationLoaderView.stop()
+            self?.animationLoaderView.isHidden = true
+            
+            if #available(iOS 13.0, *) {
+                UIApplication.shared.windows.first?.isUserInteractionEnabled = true
+            } else {
+                UIApplication.shared.endIgnoringInteractionEvents()
+            }
         }
     }
     

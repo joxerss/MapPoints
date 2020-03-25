@@ -24,4 +24,7 @@ class ProfileViewContrller: UIViewController {
         MainCoordinator.shared.GSignOut()
     }
 
+    @IBAction func beginTrackingLocation(_ sender: Any) {
+        _ = LocationManager.shared.locationManager
+    }
 }

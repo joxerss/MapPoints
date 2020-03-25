@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -244,20 +244,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWN-z8-MlJ">
-                                <rect key="frame" x="140.5" y="431" width="133" height="34"/>
-                                <state key="normal" title="Google Sign Out">
-                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="googleSignOut:" destination="9qW-QK-ArY" eventType="touchUpInside" id="zsK-0d-eHg"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="92M-dT-8S6">
+                                <rect key="frame" x="111.5" y="410" width="191" height="76"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkZ-Gk-doW">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="34"/>
+                                        <state key="normal" title="Begin location manager">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beginTrackingLocation:" destination="9qW-QK-ArY" eventType="touchUpInside" id="GuH-d6-dup"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWN-z8-MlJ">
+                                        <rect key="frame" x="0.0" y="42" width="191" height="34"/>
+                                        <state key="normal" title="Google Sign Out">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="googleSignOut:" destination="9qW-QK-ArY" eventType="touchUpInside" id="zsK-0d-eHg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="TWN-z8-MlJ" firstAttribute="centerX" secondItem="TME-QR-KMW" secondAttribute="centerX" id="iiq-IB-rTj"/>
-                            <constraint firstItem="TWN-z8-MlJ" firstAttribute="centerY" secondItem="TME-QR-KMW" secondAttribute="centerY" id="yhg-qt-fxb"/>
+                            <constraint firstItem="92M-dT-8S6" firstAttribute="centerY" secondItem="TME-QR-KMW" secondAttribute="centerY" id="Pa8-57-q52"/>
+                            <constraint firstItem="92M-dT-8S6" firstAttribute="centerX" secondItem="TME-QR-KMW" secondAttribute="centerX" id="Zqt-UG-ALV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Amh-Bm-oEf"/>
                     </view>

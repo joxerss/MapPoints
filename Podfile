@@ -3,7 +3,7 @@
 
 target 'MapPoints' do
   # Comment the next line if you don't want to use dynamic frameworks
-  # use_frameworks!
+  use_frameworks!
 
   # Pods for MapPoints
   pod 'Firebase/Core', '~> 6.13.0'
@@ -15,7 +15,9 @@ target 'MapPoints' do
   # GoogleMaps Pods
   pod 'GoogleMaps', '~> 3.6.0'
   pod 'GooglePlaces', '~> 3.6.0'
-  pod 'Google-Maps-iOS-Utils'
+
+  # MatreialIO
+  pod 'MaterialComponents', '~> 107.3.0'
 
   # Animations
   pod 'lottie-ios', '~> 3.1.5'

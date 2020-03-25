@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import CoreLocation
 
 extension UIViewController {
     static func initContoller(_ storyboard: String, identifier: String) -> UIViewController {

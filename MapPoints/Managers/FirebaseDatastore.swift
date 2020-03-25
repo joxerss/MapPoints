@@ -21,6 +21,12 @@ class FirebaseDatastore: NSObject {
         }
     }
     
+    var locationCount: Int {
+        get {
+            return listLocations?.list?.count ?? 0
+        }
+    }
+    
     // Get a reference to the database service
     lazy var reference: DatabaseReference! = {
         return Database.database().reference()
@@ -36,7 +42,7 @@ class FirebaseDatastore: NSObject {
         
         reference.child(kLocations).observe(.value) { [weak self] (snapshot) in
             guard let jsonLocations = snapshot.value as? Array<Dictionary<String, Any>> else {
-                print("⚠️❌ Firebase Realtime Database incorrect locations data")
+                print("⚠️❌ Firebase Realtime Database incorrect locations data | maybe data is nil.")
                 return
             }
             self?.listLocations = Locations.init(with: jsonLocations)
