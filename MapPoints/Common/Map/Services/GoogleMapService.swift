@@ -108,6 +108,9 @@ extension GoogleMapService {
         clusterManager.clearItems()
         googleMap.clear()
         
+        googleMap.settings.compassButton = true
+        googleMap.settings.myLocationButton = true
+        
         if let items = dataSource?.mapItems {
             clusterManager.add(items.map { MarkerItem(mapItem: $0) })
             clusterManager.cluster()

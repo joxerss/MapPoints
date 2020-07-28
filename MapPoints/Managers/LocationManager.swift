@@ -86,7 +86,7 @@ extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("🗺 LocationManager didUpdateLocations | Application state \(UIApplication.shared.applicationState.rawValue)")
-        for location in locations {
+        /*for location in locations {
             let time = Date()
             let timeFormater = DateFormatter()
             timeFormater.dateFormat = "MMM E d, yyyy | h:mm a"
@@ -94,7 +94,7 @@ extension LocationManager: CLLocationManagerDelegate {
             
             let firebaseObject = Location.init(name: timeString, location: location.coordinate)
             FirebaseDatastore.shared.addPoint(json: firebaseObject.toJson())
-        }
+        }*/
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
