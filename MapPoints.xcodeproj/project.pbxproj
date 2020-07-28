@@ -20,6 +20,8 @@
 		AC40986223B6570200476648 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40986123B6570200476648 /* String+Extensions.swift */; };
 		AC40986423B664FE00476648 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40986323B664FE00476648 /* UserManager.swift */; };
 		AC40986623B6676300476648 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40986523B6676300476648 /* MainCoordinator.swift */; };
+		AC4649612464BF6D000E8E08 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4649602464BF6D000E8E08 /* SearchResultViewController.swift */; };
+		AC4649632464C054000E8E08 /* Modal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4649622464C054000E8E08 /* Modal.storyboard */; };
 		AC47624E242BB5BE0012E64F /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47624D242BB5BE0012E64F /* Material.swift */; };
 		AC47632D242BD8C10012E64F /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = AC476327242BD8C00012E64F /* GQTPointQuadTreeChild.m */; };
 		AC47632E242BD8C10012E64F /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = AC47632B242BD8C00012E64F /* GQTPointQuadTree.m */; };
@@ -50,8 +52,8 @@
 		AC53CD3223BF48D300665ECD /* CreationPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC53CD3123BF48D300665ECD /* CreationPointViewController.swift */; };
 		AC5AAC0F23B7B484005AF47E /* checked-done.json in Resources */ = {isa = PBXBuildFile; fileRef = AC5AAC0E23B7B484005AF47E /* checked-done.json */; };
 		AC5AAC1123B7B533005AF47E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5AAC1023B7B533005AF47E /* UIViewController+Extensions.swift */; };
+		AC5CC95E24D0CAE8004D4258 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC745284242B642B00D2D0DA /* LocationManager.swift */; };
 		AC61509823BA094700FE8210 /* loading-google.json in Resources */ = {isa = PBXBuildFile; fileRef = AC61509723BA094700FE8210 /* loading-google.json */; };
-		AC745285242B642B00D2D0DA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC745284242B642B00D2D0DA /* LocationManager.swift */; };
 		AC745287242B643F00D2D0DA /* ApplictionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC745286242B643F00D2D0DA /* ApplictionSettings.swift */; };
 		AC98625A23BE216400032DD7 /* search-empty.json in Resources */ = {isa = PBXBuildFile; fileRef = AC98625923BE216300032DD7 /* search-empty.json */; };
 		AC98625C23BE229400032DD7 /* MapPoitsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98625B23BE229400032DD7 /* MapPoitsListViewController.swift */; };
@@ -73,6 +75,7 @@
 		ACC77D2E23B55BEC007B6A0C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC77D2D23B55BEC007B6A0C /* SignInViewController.swift */; };
 		ACC77D3223B55C87007B6A0C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC77D3123B55C87007B6A0C /* MainTabBarViewController.swift */; };
 		ACE3C76223B932AD00CD7A20 /* FirebaseDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3C76123B932AD00CD7A20 /* FirebaseDatastore.swift */; };
+		ACE954BE24A53A7B00EEE732 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE954BD24A53A7B00EEE732 /* AppDelegate+Notifications.swift */; };
 		ACFDDAAE23BBCE5800F41530 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDDAAD23BBCE5800F41530 /* Locations.swift */; };
 		ACFDDAB023BBCECE00F41530 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDDAAF23BBCECE00F41530 /* Location.swift */; };
 		ACFDDAB223BBD16400F41530 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDDAB123BBD16400F41530 /* Point.swift */; };
@@ -91,6 +94,8 @@
 		AC40986123B6570200476648 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		AC40986323B664FE00476648 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		AC40986523B6676300476648 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		AC4649602464BF6D000E8E08 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		AC4649622464C054000E8E08 /* Modal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Modal.storyboard; sourceTree = "<group>"; };
 		AC47624D242BB5BE0012E64F /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 		AC476326242BD8C00012E64F /* GQTPointQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTree.h; sourceTree = "<group>"; };
 		AC476327242BD8C00012E64F /* GQTPointQuadTreeChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTPointQuadTreeChild.m; sourceTree = "<group>"; };
@@ -189,6 +194,7 @@
 		ACC77D2D23B55BEC007B6A0C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		ACC77D3123B55C87007B6A0C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		ACE3C76123B932AD00CD7A20 /* FirebaseDatastore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatastore.swift; sourceTree = "<group>"; };
+		ACE954BD24A53A7B00EEE732 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
 		ACFDDAAD23BBCE5800F41530 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		ACFDDAAF23BBCECE00F41530 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		ACFDDAB123BBD16400F41530 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
@@ -260,6 +266,14 @@
 				AC5AAC1023B7B533005AF47E /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC4649642464C07F000E8E08 /* SearchViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC4649602464BF6D000E8E08 /* SearchResultViewController.swift */,
+			);
+			path = SearchViewControllers;
 			sourceTree = "<group>";
 		};
 		AC4762C1242BD7D70012E64F /* Google-Maps-iOS-Utils */ = {
@@ -473,6 +487,7 @@
 			children = (
 				ACC77D1B23B55B2B007B6A0C /* Main.storyboard */,
 				ACC77D2023B55B2D007B6A0C /* LaunchScreen.storyboard */,
+				AC4649622464C054000E8E08 /* Modal.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -480,6 +495,7 @@
 		ACC77D2A23B55B69007B6A0C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC4649642464C07F000E8E08 /* SearchViewControllers */,
 				ACC77D2D23B55BEC007B6A0C /* SignInViewController.swift */,
 				ACC77D3123B55C87007B6A0C /* MainTabBarViewController.swift */,
 				AC38ED4B23B69C58002AADB6 /* ProfileViewContrller.swift */,
@@ -509,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				ACC77D1523B55B2B007B6A0C /* AppDelegate.swift */,
+				ACE954BD24A53A7B00EEE732 /* AppDelegate+Notifications.swift */,
 				AC40985B23B64C5100476648 /* AppDelegate+Extensions.swift */,
 				ACC77D1723B55B2B007B6A0C /* SceneDelegate.swift */,
 			);
@@ -589,6 +606,7 @@
 				AC98634E23BE96B800032DD7 /* firbaseBackup.json in Resources */,
 				AC40985023B6454D00476648 /* blue-waves-animation.json in Resources */,
 				AC40985423B64AB400476648 /* landing-page.json in Resources */,
+				AC4649632464C054000E8E08 /* Modal.storyboard in Resources */,
 				AC61509823BA094700FE8210 /* loading-google.json in Resources */,
 				ACC77D1F23B55B2D007B6A0C /* Assets.xcassets in Resources */,
 				ACC77D1D23B55B2B007B6A0C /* Main.storyboard in Resources */,
@@ -673,7 +691,6 @@
 				AC476337242BD8CD0012E64F /* GMUHeatmapTileLayer.m in Sources */,
 				AC40986623B6676300476648 /* MainCoordinator.swift in Sources */,
 				ACC77D3223B55C87007B6A0C /* MainTabBarViewController.swift in Sources */,
-				AC745285242B642B00D2D0DA /* LocationManager.swift in Sources */,
 				AC476396242BD9390012E64F /* GMUGridBasedClusterAlgorithm.m in Sources */,
 				ACC77D1623B55B2B007B6A0C /* AppDelegate.swift in Sources */,
 				AC47637F242BD90A0012E64F /* GMUFeature.m in Sources */,
@@ -709,6 +726,7 @@
 				ACFDDAB223BBD16400F41530 /* Point.swift in Sources */,
 				AC40986023B6517E00476648 /* UIColor+Extensions.swift in Sources */,
 				AC53CD3223BF48D300665ECD /* CreationPointViewController.swift in Sources */,
+				ACE954BE24A53A7B00EEE732 /* AppDelegate+Notifications.swift in Sources */,
 				AC47638B242BD9200012E64F /* GMUClusterManager.m in Sources */,
 				AC47637C242BD90A0012E64F /* GMUGeometryCollection.m in Sources */,
 				AC98625C23BE229400032DD7 /* MapPoitsListViewController.swift in Sources */,
@@ -719,8 +737,10 @@
 				AC476397242BD9390012E64F /* GMUSimpleClusterAlgorithm.m in Sources */,
 				AC476381242BD90A0012E64F /* GMUPolygon.m in Sources */,
 				AC40986423B664FE00476648 /* UserManager.swift in Sources */,
+				AC5CC95E24D0CAE8004D4258 /* LocationManager.swift in Sources */,
 				AC40985823B64BBE00476648 /* Notifications+Extensions.swift in Sources */,
 				AC47637E242BD90A0012E64F /* GMUPoint.m in Sources */,
+				AC4649612464BF6D000E8E08 /* SearchResultViewController.swift in Sources */,
 				AC47633F242BD8DF0012E64F /* GMUGeoJSONParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

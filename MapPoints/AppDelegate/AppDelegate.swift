@@ -14,10 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         configurateFirebase()
+        registerForPushNotifications()
         
+        _ = LocationManager.shared
         if (launchOptions?[UIApplication.LaunchOptionsKey.location] != nil) {
             print("📱 Application didFinishLaunchingWithOptions = location. Application state \(UIApplication.shared.applicationState.rawValue)")
-            _ = LocationManager.shared.locationManager
         } else {
             print("📱 Application didFinishLaunchingWithOptions. Application state \(UIApplication.shared.applicationState.rawValue)")
         }

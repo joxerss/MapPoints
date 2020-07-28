@@ -37,6 +37,11 @@ extension UIViewController {
     
     // MARK: - Modal storyboard controllers identities
     static public let modalConnectionViewController = "InternetConnection"
+    static public let searchResultViewController = "SearchResultViewController"
+}
+
+extension UITableViewCell {
+    static public let searchResultCell = "SearchResultCell"
 }
 
 extension UINib {

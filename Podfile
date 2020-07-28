@@ -13,11 +13,11 @@ target 'MapPoints' do
   pod 'Firebase/Database', '~> 6.13.0'
 
   # GoogleMaps Pods
-  pod 'GoogleMaps', '~> 3.6.0'
-  pod 'GooglePlaces', '~> 3.6.0'
+  pod 'GoogleMaps'#, '~> 3.8.0'
+  pod 'GooglePlaces'#, '~> 3.8.0'
 
   # MatreialIO
-  pod 'MaterialComponents', '~> 107.3.0'
+  pod 'MaterialComponents'#, '~> 107.3.0'
 
   # Animations
   pod 'lottie-ios', '~> 3.1.5'

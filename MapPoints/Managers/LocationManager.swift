@@ -15,7 +15,7 @@ class LocationManager: NSObject {
     
     /// Lcation manager will init and start in lazy var.
     lazy var locationManager: CLLocationManager = {
-        print("🧭 LocationManager init locationManager thow lazy var.");
+        print("🗺 LocationManager init locationManager thow lazy var.");
         var manager: CLLocationManager = CLLocationManager()
         manager.delegate = self
         manager.allowsBackgroundLocationUpdates = ApplictionSettings.shared.shouldTrackLocationBG
@@ -24,14 +24,6 @@ class LocationManager: NSObject {
         manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         manager.distanceFilter = 10
         manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
-        
-        if(ApplictionSettings.shared.shouldTrackLocationOFF &&
-            CLLocationManager.significantLocationChangeMonitoringAvailable()){
-            manager.startMonitoringSignificantLocationChanges()
-        } else {
-            print("🧭 LocationManager startMonitoringSignificantLocationChanges: \(ApplictionSettings.shared.shouldTrackLocationOFF) | should it track:  \(CLLocationManager.significantLocationChangeMonitoringAvailable())")
-        }
         
         return manager
     }()
@@ -40,7 +32,8 @@ class LocationManager: NSObject {
     
     private override init() {
         super.init()
-        self.validateIsLcoationServicesEnabled()
+        _ = locationManager
+        //self.validateIsLcoationServicesEnabled()
     }
     
     // MARK: - Actions
@@ -57,17 +50,19 @@ class LocationManager: NSObject {
         manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         manager.distanceFilter = 10
         manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
-        
-        if(ApplictionSettings.shared.shouldTrackLocationOFF &&
-            CLLocationManager.significantLocationChangeMonitoringAvailable()){
-            manager.startMonitoringSignificantLocationChanges()
-        } else {
-            print("🧭 LocationManager startMonitoringSignificantLocationChanges: \(ApplictionSettings.shared.shouldTrackLocationOFF) | should it track:  \(CLLocationManager.significantLocationChangeMonitoringAvailable())")
-        }
         
         locationManager = manager
-        print("🧭 LocationManager reinitLocationManager locationManager.");
+        print("🗺 LocationManager reinitLocationManager locationManager.");
+    }
+    
+    public func stratTrackingLocation() {
+        if(ApplictionSettings.shared.shouldTrackLocationOFF &&
+            CLLocationManager.significantLocationChangeMonitoringAvailable()){
+            locationManager.startUpdatingLocation()
+            locationManager.startMonitoringSignificantLocationChanges()
+        } else {
+            print("🗺 LocationManager startMonitoringSignificantLocationChanges: \(ApplictionSettings.shared.shouldTrackLocationOFF) | should it track:  \(CLLocationManager.significantLocationChangeMonitoringAvailable())")
+        }
     }
     
     public func stopTrackingLocation() {
@@ -79,18 +74,18 @@ class LocationManager: NSObject {
     
     func validateIsLcoationServicesEnabled() {
         if CLLocationManager.locationServicesEnabled() {
-            print("🧭 LocationManager locationServicesEnabled");
+            print("🗺 LocationManager locationServicesEnabled");
             return
         }
         
-        Material.showMaterialAlert(title: "🧭 LocationManager", message: "Location Services Disabled, please turn it on in capabilities")
+        Material.showMaterialAlert(title: "🗺 LocationManager", message: "Location Services Disabled, please turn it on in capabilities")
     }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("🧭 LocationManager didUpdateLocations | Application state \(UIApplication.shared.applicationState.rawValue)")
+        print("🗺 LocationManager didUpdateLocations | Application state \(UIApplication.shared.applicationState.rawValue)")
         for location in locations {
             let time = Date()
             let timeFormater = DateFormatter()
@@ -103,21 +98,28 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("🧭 LocationManager didFailWithError: \(error.localizedDescription)")
+        print("🗺 LocationManager didFailWithError: \(error.localizedDescription)")
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print("🧭 LocationManager didChangeAuthorization status: \(status.rawValue)")
-//        switch status {
-//        case .authorizedAlways:
-//            <#code#>
-//        case .authorizedWhenInUse:
-//            <#code#>
-//        case .denied:
-//            <#code#>
-//        case .restricted, .notDetermined:
-//            <#code#>
-//        }
+        print("🗺 LocationManager didChangeAuthorization status: \(status.rawValue)")
+        switch status {
+        case .authorizedAlways:
+            print("🗺 didChangeAuthorization authorizedAlways")
+            stratTrackingLocation()
+        case .authorizedWhenInUse:
+            print("🗺 didChangeAuthorization authorizedWhenInUse")
+            stratTrackingLocation()
+        case .denied:
+            print("🗺 didChangeAuthorization denied")
+            stopTrackingLocation()
+        case .restricted, .notDetermined:
+            print("🗺 didChangeAuthorization restricted | notDetermined")
+            stopTrackingLocation()
+        default:
+            print("🗺 didChangeAuthorization undefined")
+            stopTrackingLocation()
+        }
     }
     
 }

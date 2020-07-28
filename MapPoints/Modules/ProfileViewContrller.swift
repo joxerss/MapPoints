@@ -23,8 +23,5 @@ class ProfileViewContrller: UIViewController {
     @IBAction func googleSignOut(_ sender: Any) {
         MainCoordinator.shared.GSignOut()
     }
-
-    @IBAction func beginTrackingLocation(_ sender: Any) {
-        _ = LocationManager.shared.locationManager
-    }
+    
 }
