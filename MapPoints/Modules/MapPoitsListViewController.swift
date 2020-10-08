@@ -8,6 +8,7 @@
 
 import UIKit
 import MaterialComponents
+import GooglePlaces
 
 class MapPoitsListViewController: UITableViewController {
     
@@ -50,6 +51,25 @@ class MapPoitsListViewController: UITableViewController {
         self.navigationController?.navigationBar.scrollEdgeAppearance = UINavigationBarAppearance()
         self.navigationItem.hidesSearchBarWhenScrolling = true
         self.clearsSelectionOnViewWillAppear = true
+        
+        let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.tableView.bounds.width, height: 56.0)))
+        headerView.backgroundColor = .red
+        self.tableView.tableHeaderView = headerView
+        
+        let buttonPlaces:MDCButton = MDCButton(frame: CGRect(origin: CGPoint(x: 8, y: 4), size: CGSize(width: self.tableView.bounds.width - 16, height: 48)))
+        
+        buttonPlaces.setTitle("map.places".localized(), for: .normal)
+        
+        headerView.addSubview(buttonPlaces)
+        
+        buttonPlaces.addTarget(self, action: #selector(getCurrentPlace(_:)), for: .touchUpInside)
+    }
+    
+    // Add a UIButton in Interface Builder, and connect the action to this function.
+    @IBAction func getCurrentPlace(_ sender: UIButton) {
+        let googleAutocomplite: GMSAutocompleteViewController = .init()
+        googleAutocomplite.delegate = self
+        self.navigationController?.present(googleAutocomplite, animated: true, completion: nil)
     }
     
     func prepareNavigationBar() {
@@ -156,4 +176,20 @@ extension MapPoitsListViewController: UISearchControllerDelegate {
     func didPresentSearchController(_ searchController: UISearchController) {
         
     }
+}
+
+extension MapPoitsListViewController: GMSAutocompleteViewControllerDelegate {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("🗺👩🏼‍💻 GMSAutocompleteViewController didAutocompleteWith")
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("🗺❌ GMSAutocompleteViewController didFailAutocompleteWithError: \(error.localizedDescription)")
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        print("🗺👩🏼‍💻 GMSAutocompleteViewController wasCancelled")
+    }
+    
+   
 }

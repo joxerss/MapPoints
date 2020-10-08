@@ -10,15 +10,17 @@ import Foundation
 import Firebase
 import GoogleSignIn
 import GoogleMaps
+import GooglePlaces
 
 extension AppDelegate: GIDSignInDelegate {
     
     func configurateFirebase() {
         // Use Firebase library to configure APIs
+        GMSServices.provideAPIKey("AIzaSyAaR1d8kS9np4SK0BKUDApyE8cyFiPlkbY")
+        GMSPlacesClient.provideAPIKey("AIzaSyAaR1d8kS9np4SK0BKUDApyE8cyFiPlkbY")
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        GMSServices.provideAPIKey("AIzaSyAaR1d8kS9np4SK0BKUDApyE8cyFiPlkbY")
     }
     
     @available(iOS 9.0, *)
@@ -28,8 +30,8 @@ extension AppDelegate: GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        if let error = error {
-            
+        if error != nil {
+            print("❌ Google didSignInFor error:\(error!.localizedDescription)")
             return
         }
         
@@ -39,7 +41,7 @@ extension AppDelegate: GIDSignInDelegate {
         
         let firebaseAuth = Auth.auth()
         firebaseAuth.signIn(with: credential) { (authResult, error) in
-            if let error = error {
+            if error != nil {
                 
                 return
             }
