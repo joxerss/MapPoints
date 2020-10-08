@@ -80,7 +80,8 @@ class Material: NSObject {
         snackBar.duration = duration
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            MDCSnackbarManager.show(snackBar)
+            MDCSnackbarManager.default.show(snackBar)
+            
         }// DispatchQueue
     }
     
@@ -91,7 +92,7 @@ class Material: NSObject {
         snackBar.action = action
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            MDCSnackbarManager.show(snackBar)
+            MDCSnackbarManager.default.show(snackBar)
         }// DispatchQueue
     }
     

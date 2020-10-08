@@ -24,6 +24,7 @@ class LocationManager: NSObject {
         manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         manager.distanceFilter = 10
         manager.requestAlwaysAuthorization()
+        //manager.requestWhenInUseAuthorization()
         
         return manager
     }()
